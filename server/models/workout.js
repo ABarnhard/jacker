@@ -18,8 +18,8 @@ Workout.create = function(o, cb){
   Workout.collection.save(w, cb);
 };
 
-Workout.all = function(cb){
-  Workout.collection.find().toArray(cb);
+Workout.all = function(user, cb){
+  Workout.collection.find({userId:user._id}).toArray(cb);
 };
 
 module.exports = Workout;

@@ -11,8 +11,8 @@ Lift.create = function(o, cb){
   Lift.collection.save(o, cb);
 };
 
-Lift.all = function(cb){
-  Lift.collection.find().toArray(cb);
+Lift.all = function(user, cb){
+  Lift.collection.find({userId:user._id}).toArray(cb);
 };
 
 module.exports = Lift;

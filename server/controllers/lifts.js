@@ -9,7 +9,7 @@ exports.create = function(req, res){
 };
 
 exports.index = function(req, res){
-  Lift.all(function(err, lifts){
+  Lift.all(req.user, function(err, lifts){
     res.send({lifts:lifts});
   });
 };
