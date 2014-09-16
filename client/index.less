@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 // http://clrs.cc/
 
 @NAVY:    #001F3F;
@@ -17,7 +18,21 @@
 @GRAY:    #AAAAAA;
 @SILVER:  #DDDDDD;
 
+body{
+  font-family: 'Permanent Marker', cursive;
+}
+
 input.ng-invalid, select.ng-invalid{
   background-color: @RED;
 }
-
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 50px;
+  line-height: 20px;
+  height: 60px;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #c8c8c8;
+  font-size: 15px;
+}
