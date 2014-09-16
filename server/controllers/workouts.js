@@ -9,7 +9,7 @@ exports.create = function(req, res){
 };
 
 exports.index = function(req, res){
-  Workout.all(function(err, workouts){
+  Workout.all(req.user, function(err, workouts){
     res.send({workouts:workouts});
   });
 };

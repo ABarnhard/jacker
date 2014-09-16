@@ -8,8 +8,8 @@
       return $http.get('/lifts');
     }
 
-    function create(lift){
-      return $http.post('/lifts', {name:lift});
+    function create(name){
+      return $http.post('/lifts', {name:name});
     }
 
     return {all:all, create:create};

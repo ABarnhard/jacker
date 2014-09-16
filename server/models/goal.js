@@ -18,8 +18,8 @@ Goal.create = function(o, cb){
   Goal.collection.save(g, cb);
 };
 
-Goal.all = function(cb){
-  Goal.collection.find().toArray(cb);
+Goal.all = function(user, cb){
+  Goal.collection.find({userId:user._id}).toArray(cb);
 };
 
 module.exports = Goal;

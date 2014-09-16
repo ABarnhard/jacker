@@ -1,2 +1,14 @@
 h3 {{page}}
+.row
+  .col-xs-3
+    form(role='form', novalidate, name='liftForm')
+      .form-group
+        input.form-control(type='text', name='name', ng-model='name', autofocus, required)
+      button.btn.btn-primary(ng-show='liftForm.$valid', ng-click='addLift()') Submit
+  .col-xs-9
+.row(ng-show='lifts[0]')
+  .col-xs-6
+    h5 Lifts In Database:
+    ul
+      li(ng-repeat='lift in lifts') {{lift.name}}
 
