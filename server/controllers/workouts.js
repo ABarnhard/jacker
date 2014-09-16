@@ -3,7 +3,7 @@
 var Workout = require('../models/workout');
 
 exports.create = function(req, res){
-  Workout.create(req.body, function(err, workout){
+  Workout.create(req.body, req.user, function(err, workout){
     res.send({workout:workout});
   });
 };
