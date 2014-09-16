@@ -6,7 +6,7 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') MEAN Template
+      a.navbar-brand(href='/') Jacker
 
     .collapse.navbar-collapse#bs-navbar-collapse
       ul.nav.navbar-nav.navbar-right(ng-hide='email')
@@ -14,6 +14,13 @@
         li: a(href='/#/register') Register
         li: a(href='/#/login') Login
       ul.nav.navbar-nav.navbar-right(ng-show='email')
-        li: a(href='/#/') Home
-        li: a(href='/#/logout') {{email}}
+        li: a(href='/#/performance') Performance Tracker
+        li: a(href='/#/lifts') Lift &nbsp;
+          span.fa.fa-plus-circle
+        li: a(href='/#/goals') Goal &nbsp;
+          span.fa.fa-plus-circle
+        li: a(href='/#/workouts') Workout &nbsp;
+          span.fa.fa-plus-circle
+        li: a(href='/#/logout') {{email}} &nbsp;
+          span.fa.fa-sign-out
 
