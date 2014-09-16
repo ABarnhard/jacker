@@ -10,6 +10,7 @@
     .when('/logout',   {templateUrl:'/views/logout/logout.html',       controller:'LogoutCtrl'})
     .when('/lifts',    {templateUrl:'/views/lifts/lifts.html',          controller:'LiftsCtrl'})
     .when('/workouts', {templateUrl:'/views/workouts/workouts.html', controller:'WorkoutsCtrl'})
+    .when('/goals', {templateUrl:'/views/goals/goals.html', controller:'GoalsCtrl'})
     .otherwise({redirectTo:'/'});
 
     $httpProvider.interceptors.push('HttpInterceptor');
