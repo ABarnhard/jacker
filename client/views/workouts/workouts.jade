@@ -2,7 +2,6 @@ h3 {{page}}
 .row
   .col-xs-3
     form(role='form', novalidate, name='workoutForm')
-      button.btn.btn-danger(type='button', ng-click='addLift()') Lift +
       .form-group
         label Date:
         input.form-control(type='date', name='date', ng-model='workout.date', required, autofocus)
@@ -13,6 +12,7 @@ h3 {{page}}
         label Category
         select.form-control(ng-model='lift.liftId', name='liftId', ng-options='l._id as l.name for l in lifts | orderBy:\'name\'', required)
           option(value='') Select Lift
+  .col-xs-3
       .form-group
         label Sets
         input.form-control(type='number', name='sets', ng-model='lift.sets', required)
@@ -23,6 +23,7 @@ h3 {{page}}
         label Weight
         input.form-control(type='number', name='sets', step='any', ng-model='lift.weight', required)
       .lift(ng-repeat='l in workout.lifts') {{l.name}}
+      button.btn.btn-danger(type='button', ng-click='addLift()') Add Lift to Workout
       button.btn.btn-primary(ng-show='workoutForm.$valid', ng-click='addWorkout()') Submit
-  .col-xs-9
+  .col-xs-3
 

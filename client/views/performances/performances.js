@@ -3,7 +3,7 @@
 
   angular.module('jacker')
   .controller('PerformancesCtrl', ['$scope', 'Workout', 'Goal', function($scope, Workout, Goal){
-    $scope.page = 'Check Your Progress';
+    $scope.page = 'Your Performance:';
     $scope.date = new Date();
 
 
