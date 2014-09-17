@@ -4,6 +4,11 @@
   angular.module('jacker')
   .factory('Goal', ['$http', function($http){
 
+
+    function findDailyGoal(date){
+      return $http.get('/goals/' + date);
+    }
+
     function all(){
       return $http.get('/goals');
     }
@@ -12,7 +17,7 @@
       return $http.post('/goals', goal);
     }
 
-    return {all:all, create:create};
+    return {all:all, create:create, findDailyGoal:findDailyGoal};
   }]);
 })();
 

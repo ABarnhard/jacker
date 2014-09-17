@@ -34,8 +34,10 @@ module.exports = function(app, express){
   app.get('/lifts', lifts.index);
   app.post('/workouts', workouts.create);
   app.get('/workouts', workouts.index);
+  app.get('/workouts/:date', workouts.find);
   app.post('/goals', goals.create);
   app.get('/goals', goals.index);
+  app.get('/goals/:date', goals.find);
 
   console.log('Express: Routes Loaded');
 };

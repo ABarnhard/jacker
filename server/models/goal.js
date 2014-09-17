@@ -22,6 +22,10 @@ Goal.all = function(user, cb){
   Goal.collection.find({userId:user._id}).toArray(cb);
 };
 
+Goal.findDaily = function(userId, date, cb){
+  Goal.collection.findOne({userId:userId, date:date}, cb);
+};
+
 module.exports = Goal;
 
 // HELPER FUNTION
