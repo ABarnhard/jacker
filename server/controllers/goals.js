@@ -13,3 +13,11 @@ exports.index = function(req, res){
     res.send({goals:goals});
   });
 };
+
+exports.find = function(req, res){
+  var date = new Date(req.params.date);
+  date = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  Goal.findDaily(req.user._id, date, function(err, goal){
+    res.send({goal:goal});
+  });
+};

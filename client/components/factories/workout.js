@@ -4,6 +4,10 @@
   angular.module('jacker')
   .factory('Workout', ['$http', function($http){
 
+    function findDailyWorkout(date){
+      return $http.get('/workouts/' + date);
+    }
+
     function all(){
       return $http.get('/workouts');
     }
@@ -12,7 +16,7 @@
       return $http.post('/workouts', workout);
     }
 
-    return {all:all, create:create};
+    return {all:all, create:create, findDailyWorkout:findDailyWorkout};
   }]);
 })();
 

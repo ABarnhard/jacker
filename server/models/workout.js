@@ -22,6 +22,10 @@ Workout.all = function(user, cb){
   Workout.collection.find({userId:user._id}).toArray(cb);
 };
 
+Workout.findDaily = function(userId, date, cb){
+  Workout.collection.findOne({userId:userId, date:date}, cb);
+};
+
 module.exports = Workout;
 
 // HELPER FUNTION

@@ -13,3 +13,11 @@ exports.index = function(req, res){
     res.send({workouts:workouts});
   });
 };
+
+exports.find = function(req, res){
+  var date = new Date(req.params.date);
+  date = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  Workout.findDaily(req.user._id, date, function(err, workout){
+    res.send({workout:workout});
+  });
+};
